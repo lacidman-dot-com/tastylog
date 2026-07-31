@@ -2,16 +2,16 @@
 # Terraform configuration
 # ---------------------------------------------
 terraform {
-  required_version = ">=0.13"
+  required_version = ">=1.15.5"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.0"
+      version = ">=6.54.0"
     }
   }
   backend "s3" {
-    bucket  = "{YOUR-S3-BUCKET-NAME}"
-    key     = "{YOUR-S3-BUCKET-KEY}"
+    bucket  = "tastylog-tfstate-bucket-394377826758-ap-northeast-1-an"
+    key     = "tastylg-cicd.tfstate"
     region  = "ap-northeast-1"
     profile = "terraform"
   }
