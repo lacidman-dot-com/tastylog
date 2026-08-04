@@ -39,7 +39,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v6.2.3
         with:
-          aws-region: ap-northeast-${{ env.AWS_REGION}}
+          aws-region: ${{ env.AWS_REGION}}
           role-to-assume: ${{ secrets.AWS_IAM_ROLE_ARN }}
       - name: Terraform Init
         run: |
