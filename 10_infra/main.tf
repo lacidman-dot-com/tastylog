@@ -13,7 +13,7 @@ terraform {
     bucket  = "tastylog-tfstate-bucket-394377826758-ap-northeast-1-an"
     key     = "tastylg-cicd.tfstate"
     region  = "ap-northeast-1"
-    profile = "terraform"
+    # profile = "terraform"
   }
 }
 
@@ -21,12 +21,12 @@ terraform {
 # Provider
 # ---------------------------------------------
 provider "aws" {
-  profile = "terraform"
+  # profile = "terraform"
   region  = "ap-northeast-1"
 }
 
 provider "aws" {
   alias   = "virginia"
-  profile = "terraform"
+  # profile = "terraform"
   region  = "us-east-1"
 }
